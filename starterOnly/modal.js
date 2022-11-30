@@ -11,6 +11,7 @@ function editNav() {
 
   const modalBtn = document.querySelectorAll(".modal-btn");
   const modalClose = document.querySelectorAll(".close-btn");
+  
   const myTopnav = document.getElementById("myTopnav");
   const modalbg = document.querySelector(".bground");
   const formData = document.querySelector("formData");
@@ -30,7 +31,10 @@ document.getElementById("closeForm").addEventListener("click" , function(){
   modalbg.style.display = "none";
   form.style.display = "block";
 })
-
+document.getElementById("closeButton").addEventListener("click",function(){
+  modalbg.style.display = "none";
+  form.style.display = "block";
+})
 //Accéder à toutes les entrées et paramétrer la validation
 const inputs = {
   firstname: {
