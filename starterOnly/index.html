@@ -5,11 +5,8 @@
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="modal.css" />
+    <script src="https://kit.fontawesome.com/70f41f18b3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link
-      href="https://fonts.googleapis.com/css?family=DM+Sans"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <div class="topnav" id="myTopnav">
@@ -54,47 +51,51 @@
 
       <div class="bground">
         <div class="content">
-          <span class="close"></span>
+          <span class="close close-btn" id="closeForm" ></span>
           <div class="modal-body">
             <form
               name="reserve"
+              id="reserve"
               action="index.html"
               method="get"
+              class="register"
               onsubmit="return validate();"
             >
               <div
-                class="formData">
+                class="formData" data-error="Veuillez entrer 2 caractères ou plus pour le champ du prénom.">
                 <label>Prénom</label><br>
                 <input
                   class="text-control"
                   type="text"
                   id="first"
                   name="first"
-                  minlength="2"
-                /><br>
+                />
+                <br>
               </div>
               <div
-                class="formData">
+                class="formData " data-error="Veuillez entrer 2 caractères ou plus pour le champ du nom.">
                 <label>Nom</label><br>
                 <input
                   class="text-control"
                   type="text"
                   id="last"
                   name="last"
-                /><br>
+                />
+                <br>
               </div>
               <div
-                class="formData">
+                class="formData" data-error="Veuillez entrer un email valide.">
                 <label>E-mail</label><br>
                 <input
                   class="text-control"
                   type="email"
                   id="email"
                   name="email"
-                /><br>
+                />
+                <br>
               </div>
               <div
-                class="formData">
+                class="formData" data-error="Veuillez choisir une date de naissance.">
                 <label>Date de naissance</label><br>
                 <input
                   class="text-control"
@@ -104,7 +105,7 @@
                 /><br>
               </div>
               <div
-                class="formData">
+                class="formData"data-error="Vous devez choisir un nombre.">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
@@ -117,9 +118,10 @@
                   id="location1"
                   name="location"
                   value="New York"
+                  checked="true"
                 />
-                <label class="checkbox-label" for="location1">
-                  <span class="checkbox-icon"></span>
+                <label class="checkbox-label" for="location1" >
+                  <span class="checkbox-icon" ></span>
                   New York</label
                 >
                 <input
@@ -187,7 +189,7 @@
                   id="checkbox1"
                   checked
                 />
-                <label class="checkbox2-label" for="checkbox1" required>
+                <label class="checkbox2-label" for="checkbox1">
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
@@ -206,6 +208,10 @@
                 value="C'est parti"
               />
             </form>
+            <div class="confirm-message">
+              <p>Merci pour<br>votre inscription</p>
+              <input  class="close-btn button" id="closeButton" type="button" value="fermer">
+            </div>
           </div>
         </div>
       </div>
