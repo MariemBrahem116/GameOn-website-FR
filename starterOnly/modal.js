@@ -1,57 +1,40 @@
-
+function editNav() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 
 // DOM Elements
-
+  const navModal =  document.querySelector(".icon");
   const modalBtn = document.querySelectorAll(".modal-btn");
   const modalClose = document.querySelectorAll(".close-btn");
-  const icon = document.querySelector(".icon");
   const myTopnav = document.getElementById("myTopnav");
   const modalbg = document.querySelector(".bground");
   const formData = document.querySelector("formData");
   const confirmMessage = document.querySelector(".confirm-message");
   const form = document.querySelector(".register");
 
-
-  function editNav() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-      
-    }
-
-  }
-// icon.addEventListener("mouseover",function(e){
-//   icon.style.color = "white";
-// })
-// document.addEventListener("click",function(e){
-//   if(e.target.id === "iconMenu"){
-//     icon.style.color = "white";
-//   }
-//   else{
-//     icon.style.color = "red";
-//   }
-// })
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
   confirmMessage.style.display = "none";
 }
-
 //fermer le Formulaire
 document.getElementById("closeForm").addEventListener("click" , function(){
   modalbg.style.display = "none";
   form.style.display = "block";
 })
-//fermeture via button
-document.getElementById("closeButton").addEventListener("click",function(){
-  modalbg.style.display = "none";
-  form.style.display = "block";
-})
+//fermer via button fermer
+document.getElementById("close").addEventListener("click" , function(){
+    modalbg.style.display = "none";
+    form.style.display = "block";
+  })
+  
 //Accéder à toutes les entrées et paramétrer la validation
 const inputs = {
   firstname: {
