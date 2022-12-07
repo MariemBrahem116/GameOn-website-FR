@@ -37,6 +37,19 @@ img {
   justify-content: space-between;
   align-items: center;
   }
+ 
+.topnav a.evenement {
+    background-color: #ff0000;
+    text-decoration: underline;
+    color: #ffffff;
+    border-radius: 15px;
+}
+.topnav a.evenement:hover{
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 15px;
+  text-decoration: underline;
+}
 .header-logo {
     float: left;
     margin-left: 5px;
@@ -44,6 +57,7 @@ img {
 .main-navbar {
     float: right;
 }
+
 .topnav a {
   float: left;
   display: block;
@@ -140,7 +154,7 @@ main {
   z-index: 4;
   left: 0;
   top: 0;
-  height: 100%;
+  height: 109%;
   width: 100%;
   overflow: auto;
   background-color:white;
@@ -404,6 +418,7 @@ input[data-error]::after {
   position: relative;
   text-align: left;
   border-radius: 10px 0 0 10px;
+  min-width: 424px;
 }
 .hero-content::after {
   content: "";
@@ -435,7 +450,7 @@ input[data-error]::after {
   font-size:1.6rem;
   padding: 15px 32px;
   margin: 0;
-  margin-top: 35%;
+  margin-top: 25%;
 }
 .hero-img {
   grid-column: span 8;
@@ -464,7 +479,7 @@ input[data-error]::after {
   font-size: 38px;
   letter-spacing: 2px;
   display: flex;
-  height: 750px;
+  height: 493px;
   align-items: center;
   justify-content: center;
   line-height: 40px;
@@ -485,6 +500,7 @@ footer {
   .hero-content{
     padding:40px 47px;
     grid-column: span 2;
+    min-width: 322px;
   }
   .hero-content::after{display:none;}
   .hero-text{width:100%;}
@@ -493,6 +509,12 @@ footer {
     background-color: #ff0000;
     color: #ffffff;
     border-radius: 15px;
+    text-decoration: underline;
+  }
+  .topnav a.evenement{
+    text-decoration: none;
+    color: #232323;
+    background-color: transparent;
   }
   .topnav a {display: none;}
   .topnav a.icon {
@@ -531,9 +553,7 @@ footer {
     overflow: visible;
     
   }
-  .hero-content{
-    width: 136%;
-  }
+  
   .btn-signup{
     font-size: 1rem;
   }
@@ -570,7 +590,7 @@ footer {
   }
   .hero-img img {
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 25px;
     width:100%;
   }
  
@@ -605,6 +625,7 @@ footer {
   }
   .main-navbar{
     top:9px;
+    z-index:5;
   }
  
   .hero-content{
@@ -612,7 +633,7 @@ footer {
   }
   .content{
     width:100%;
-    height:127%;
+    height:119%;
   }
   .bground{
     top:57px;
@@ -627,7 +648,13 @@ footer {
     font-size: 11px;
   }
   input{
-    padding: 24px;
+    padding: 12px;
+  }
+  .btn-submit{
+    padding:6px 34px;
+  }
+  .confirm-message p{
+    font-size: 34px;
   }
 }
 @keyframes modalopen {
