@@ -9,7 +9,6 @@
   padding: 0;
 }
 /* Landing Page */
-
 body {
   margin: 0;
   display: flex;
@@ -20,30 +19,29 @@ body {
   max-width: 1300px;
   margin: 0 auto;
 }
-
 p {
   margin-bottom: 0;
   padding: 0.5vw;
 }
-
 img {
   padding-right: 1rem;
 }
-
 .topnav {
   overflow: hidden;
+  /*ajustement de l' En-tête de la page*/
   margin: 3.5% 0 3.5% 3.5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   }
- 
+/* ajout des caractéristiques de la classe évènement*/
 .topnav a.evenement {
-    background-color: #ff0000;
-    text-decoration: underline;
-    color: #ffffff;
-    border-radius: 15px;
+  background-color: #ff0000;
+  text-decoration: underline;
+  color: #ffffff;
+  border-radius: 15px;
 }
+/*ajout des caractéristiques de la classe évènement en cas de survole*/
 .topnav a.evenement:hover{
   background-color: #ff0000;
   color: #ffffff;
@@ -51,16 +49,17 @@ img {
   text-decoration: underline;
 }
 .header-logo {
-    float: left;
-    margin-left: 5px;
+  float: left;
+  /*ajout d'une marge à gauche*/
+  margin-left: 5px;
 }
 .main-navbar {
-    float: right;
+  float: right;
 }
-
 .topnav a {
   float: left;
   display: block;
+  /*changement de la couleur des liens*/
   color: #232323;
   text-align: center;
   padding: 12px 12px;
@@ -74,24 +73,25 @@ img {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 15px;
+  /*soulignement des liens*/
   text-decoration: underline;
 }
+/*donner la couleur rouge a l'icone*/
+.topnav a.icon {
+  color:red;
+}
+/*ajout du suvole sur l'icone en lui donnant un poids important*/
 .topnav a.icon:hover {
   background: #ff0000!important;
   color: #fff!important;
-  
 }
+/*masquer la classe active comme demandé dans la maquette*/
 .topnav a.active{
   display: none;
 }
 .topnav .icon {
   display: none;
 }
-
-.topnav a.icon{
-color:red;
-}
-
 main {
   font-size: 130%;
   font-weight: bolder;
@@ -99,13 +99,11 @@ main {
   padding-top: 0.5vw;
   padding-left: 2vw;
   padding-right: 2vw;
+  /*augmentation de la margine du haut*/
   margin: 20px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
-
-
 }
-
 .modal-btn {
   font-size: 145%;
   background: #fe142f;
@@ -117,19 +115,15 @@ main {
   border-radius: 1rem;
   cursor: pointer;
 }
-
 .modal-btn:hover {
   background: #3876ac;
 }
-
 .footer {
   margin: 20px;
   padding: 10px;
   font-family: var(--font-slab);
 }
-
 /* Modal form */
-
 .button {
   background: #fe142f;
   margin-top: 0.5em;
@@ -139,31 +133,29 @@ main {
   cursor: pointer;
   font-size: 16px;
 }
-
 .button:hover {
   background: #3876ac;
 }
-
 .smFont {
   font-size: 16px;
 }
-
 .bground {
   display: none;
   position: fixed;
-  z-index: 4;
+  z-index: 1;
   left: 0;
   top: 0;
   height: 109%;
   width: 100%;
   overflow: auto;
+  /*changement du font*/
   background-color:white;
 }
-
 .content {
   margin: 5% auto;
-  width:536px;
-  height: 850px;
+  /*changement de la taille du contenu*/
+  /*{*/width:536px;
+  /*}*/height: 850px;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
   background: #232323;
@@ -173,12 +165,10 @@ main {
   color: #fff;
   padding-top: 10px;
 }
-
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
 }
-
 label {
   font-family: var(--font-default);
   font-size: 17px;
@@ -187,6 +177,7 @@ label {
   margin-bottom: 11px;
 }
 input {
+  /*augmentation de padding comme demandé*/
   padding: 28px;
   border: 0.8px solid #ccc;
 }
@@ -199,7 +190,7 @@ input {
 }
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.5em;
+  font-size: 0.4em;
   color: #e54858;
   display: block;
   margin-top: 7px;
@@ -215,12 +206,10 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-
- 
 input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
+  content: attr(data-error);
+  font-size: 0.4em;
+  color: red;
 } 
 .checkbox-label,
 .checkbox2-label {
@@ -296,8 +285,6 @@ input[data-error]::after {
   cursor: pointer;
   transform: scale(0.7);
 }
-
-
 .close:before,
 .close:after {
   position: absolute;
@@ -315,6 +302,7 @@ input[data-error]::after {
 }
 .btn-submit,
 .btn-signup ,
+/*ajout du bouton fermer après avoir être inscrit*/
 .confirm-message .close-btn{
   background: #fe142f;
   display: block;
@@ -326,9 +314,11 @@ input[data-error]::after {
   cursor: pointer;
   border: 0;
 }
+/*ajout du padding pour le button fermer*/
 .close-btn.button{
   padding: 10px 68px;
 }
+/*ajout du padding pour le button c'est parti*/
 .btn-submit{
   margin-top: 15px;
 }
@@ -339,14 +329,12 @@ input[data-error]::after {
   font-size: 1.1rem;
   font-weight: normal;
 }
-
 .custom-select select {
   display: none;
 }
 .select-selected {
   background-color: #fff;
 }
-
 /* Style the arrow inside the select element: */
 .select-selected:after {
   position: absolute;
@@ -361,13 +349,11 @@ input[data-error]::after {
   transform: rotate(-48deg);
   border-radius: 5px 0 5px 0;
 }
-
 /* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
   transform: rotate(135deg);
   top: 13px;
 }
-
 .select-items div,
 .select-selected {
   color: #000;
@@ -378,7 +364,6 @@ input[data-error]::after {
   border-radius: 8px;
   height: 48px;
 }
-
 /* Style items (options): */
 .select-items {
   position: absolute;
@@ -388,12 +373,10 @@ input[data-error]::after {
   right: 0;
   z-index: 99;
 }
-
 /* Hide the items when the select box is closed: */
 .select-hide {
   display: none;
 }
-
 .select-items div:hover,
 .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
@@ -433,6 +416,10 @@ input[data-error]::after {
   position: relative;
   z-index: 1;
 }
+/*masquer le button s'inscrire qui se trouve sous l'image*/
+.hero-section > .btn-signup {
+  display: none;
+}
 .hero-headline {
   font-size: 6rem;
   font-weight: normal;
@@ -441,21 +428,25 @@ input[data-error]::after {
 .hero-text {
   width: 146%;
   font-weight: normal;
+  /*changement de la margine du haut*/
   margin-top: 90px;
   padding: 0;
 }
 .btn-signup {
   outline: none;
   text-transform: capitalize;
+  /*aumgmention de la taille*/
   font-size:1.6rem;
   padding: 15px 32px;
   margin: 0;
-  margin-top: 25%;
+  /*changement de la margine du haut*/
+  margin-top: 30%;
 }
 .hero-img {
   grid-column: span 8;
 }
 .hero-img img {
+  /*modification du taille d'image */
   width: 97%;
   height: 100%;
   display: block;
@@ -469,17 +460,19 @@ input[data-error]::after {
   font-size: 0.9rem;
   margin: 60px 0 30px;
   font-weight: bolder;
+  /*modifiction de la margine gauche*/
   margin-left: -30px;
 }
-
+/*ajout des caratctéristiques de message de confirmation*/
 .confirm-message{
   flex-direction: column;
 }
+/*ajout des caractéristiques du paragraphe*/
 .confirm-message p{
   font-size: 38px;
   letter-spacing: 2px;
   display: flex;
-  height: 493px;
+  height: 736px;
   align-items: center;
   justify-content: center;
   line-height: 40px;
@@ -487,9 +480,12 @@ input[data-error]::after {
   text-align: center;
 }
 footer {
+  /*modification du padding et de la margine*/
   padding: 10px;
   margin: 0 20px;
 }
+/*ajout de la partie responsive*/
+/*modification quand l'écran est inferieur à 1050 px*/
 @media screen and (max-width: 1050px) {
   .header-logo img
   {
@@ -558,6 +554,7 @@ footer {
     font-size: 1rem;
   }
 }
+/*modification quand l'écran est inferieur a 800 px*/
 @media screen and (max-width: 800px) {
   .header-logo img{
     width:45%;
@@ -578,6 +575,9 @@ footer {
   .hero-content .btn-signup {
     display: none;
   }
+  .hero-section > .btn-signup{
+    display: block;
+  }
   .hero-headline {
     text-align: center;
     font-size: 2.4rem;
@@ -593,10 +593,9 @@ footer {
     margin-top: 25px;
     width:100%;
   }
- 
   .hero-section > .btn-signup {
     display: block;
-    margin: 32px auto 10px;
+    margin: 32px auto 0px;
     padding: 9px 29px;
   }
   .btn-signup{
@@ -609,11 +608,11 @@ footer {
     margin-left: 0;
     font-size: 9.5px;
   }
- 
   .hero-content{
     width:100%;
   }
 }
+/*modification quand l'écran est inferieur a 540 px*/
 @media screen and (max-width: 540px) {
   .topnav a {display: none;}
   .topnav a.icon {
@@ -631,7 +630,7 @@ footer {
   }
   .content{
     width:100%;
-    height:119%;
+    height:121%;
   }
   .bground{
     top:57px;
@@ -653,6 +652,7 @@ footer {
   }
   .confirm-message p{
     font-size: 34px;
+    height: 480px;
   }
 }
 @keyframes modalopen {

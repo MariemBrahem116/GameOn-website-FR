@@ -1,22 +1,20 @@
-function editNav() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-
-// DOM Elements
-  const navModal =  document.querySelector(".icon");
+//Elements DOM
+  const  icon = document.querySelector(".icon");
   const modalBtn = document.querySelectorAll(".modal-btn");
-  const modalClose = document.querySelectorAll(".close-btn");
   const myTopnav = document.getElementById("myTopnav");
   const modalbg = document.querySelector(".bground");
-  const formData = document.querySelector("formData");
+  const containerInput = document.querySelectorAll(".formData");
   const confirmMessage = document.querySelector(".confirm-message");
   const form = document.querySelector(".register");
-
+  function editNav() {
+    if (myTopnav.className === "topnav") {
+        myTopnav.className += " responsive";
+        icon.style.color = "white";//si la classe est responsive  l'icone prend la couleur banche
+    } else {
+        myTopnav.className = "topnav";
+        icon.style.color = "red";//sinon elle prend la couleur rouge
+    }
+  }
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 // launch modal form
@@ -24,7 +22,7 @@ function launchModal() {
   modalbg.style.display = "block";
   confirmMessage.style.display = "none";
 }
-//fermer le Formulaire
+//fermer le Formulaire via croix
 document.getElementById("closeForm").addEventListener("click" , function(){
   modalbg.style.display = "none";
   form.style.display = "block";
@@ -34,8 +32,8 @@ document.getElementById("close").addEventListener("click" , function(){
     modalbg.style.display = "none";
     form.style.display = "block";
   })
-  
 //Accéder à toutes les entrées et paramétrer la validation
+//Indiquer si l'expression régulière trouve une correspondance dans la chaîne d'entrée
 const inputs = {
   firstname: {
       element: document.querySelector("#first"),
@@ -65,20 +63,14 @@ const inputs = {
       element: document.querySelector('#checkbox1'), 
   }
 };
-
 // pour atteindre tous les éléments qui affichent des messages d'erreur pour la validation du formulaire
-const containerInput = document.querySelectorAll(".formData");
-
- class validate {
-    
+ class validate {  
   constructor(inputs, containerInput) {
       this.inputs = inputs;
       this.containerInput = containerInput;
   }
   valid = true;
-
   // Les méthodes de validation
-
       //vérifier si le nom et le prénom ne sont pas vide et ils comportent  au minimum 2 lettres 
       nameValidation = (element, regex) => element.value == "" || element.value.length < 2 || !regex.test(element.value) ? false : true;
 
@@ -108,9 +100,7 @@ const containerInput = document.querySelectorAll(".formData");
   };
 
   launchValidation = () => {
-
       this.removeErrorMessage();
-      
       for (const input in this.inputs) {
           switch (input) {
               case "firstname":
@@ -170,18 +160,14 @@ const containerInput = document.querySelectorAll(".formData");
       return this.valid;
   }
 }
-
-
-// Valider le formulaire
+// Valider le formulaire en cas de remplissage de donnée sans erreur
 const validator = new validate(inputs, containerInput);
-
 form.onsubmit = (e) => {
     e.preventDefault();
     if (validator.launchValidation()) {
         form.reset();
         form.style.display ="none";
         confirmMessage.style.display ="flex";
-
     }
 }
 
