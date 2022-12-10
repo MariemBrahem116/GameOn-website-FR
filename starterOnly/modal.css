@@ -467,6 +467,7 @@ input[data-error]::after {
 /*ajout des caratctéristiques de message de confirmation*/
 .confirm-message{
   flex-direction: column;
+  height: 710px;
 }
 /*ajout des caractéristiques du paragraphe*/
 .confirm-message p{
@@ -653,7 +654,7 @@ footer {
   }
   .confirm-message p{
     font-size: 34px;
-    margin-top:70px;
+    margin-top:170px;
   }
 }
 @keyframes modalopen {
