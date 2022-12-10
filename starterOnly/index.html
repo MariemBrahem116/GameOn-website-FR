@@ -16,6 +16,7 @@
     </div>
     <div class="main-navbar">
       <a href="#" class="active"><span>Accueil</span></a>
+      <!-- ajout de la classe evenement-->
       <a href="#" class="evenement"><span>Détails de l'évènement</span></a>
       <a href="#"><span>À Propos</span></a>
       <a href="#"><span>Contact</span></a>
@@ -52,8 +53,10 @@
       <div class="bground">
         
         <div class="content">
+          <!--ajout de close-btn et le id-->
           <span class="close close-btn" id="closeForm" ></span>
           <div class="modal-body">
+            <!--ajout de la classe register-->
             <form
               name="reserve"
               id="reserve"
@@ -61,7 +64,7 @@
               method="get"
               class="register"
               onsubmit="return validate();"
-            >
+            > <!--ajout de data-erroravec les différerents messages d'erreur-->
               <div
                 class="formData" data-error="Veuillez entrer 2 caractères ou plus pour le champ du prénom.">
                 <label>Prénom</label><br>
@@ -113,6 +116,7 @@
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
                 class="formData">
+                <!--ajout de check pour  new york-->
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -209,6 +213,7 @@
                 value="C'est parti"
               />
             </form>
+            <!--ajout de la classe confirm message pour confirmer l'inscription-->
             <div class="confirm-message">
               <p>Merci pour<br>votre inscription</p>
               <input  class="close-btn button" id="close" type="button" value="fermer">

@@ -317,6 +317,7 @@ input[data-error]::after {
 /*ajout du padding pour le button fermer*/
 .close-btn.button{
   padding: 10px 68px;
+  margin-top: 184px;
 }
 /*ajout du padding pour le button c'est parti*/
 .btn-submit{
@@ -652,7 +653,7 @@ footer {
   }
   .confirm-message p{
     font-size: 34px;
-    height: 480px;
+    margin-top:70px;
   }
 }
 @keyframes modalopen {

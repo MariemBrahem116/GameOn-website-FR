@@ -6,6 +6,7 @@
   const containerInput = document.querySelectorAll(".formData");
   const confirmMessage = document.querySelector(".confirm-message");
   const form = document.querySelector(".register");
+  //crér une classe en cas responsive 
   function editNav() {
     if (myTopnav.className === "topnav") {
         myTopnav.className += " responsive";
